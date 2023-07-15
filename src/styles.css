@@ -1,0 +1,10 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    transition: all 0.2s linear;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
