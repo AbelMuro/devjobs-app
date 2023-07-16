@@ -1,8 +1,18 @@
+@font-face {
+    font-family: 'kumbh sans';
+    src: url('./Common/Fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf');
+}
+
+:root{
+    --font: 'kumbh sans';    
+}
+
 * {
     padding: 0px;
     margin: 0px;
     transition: all 0.2s linear;
     box-sizing: border-box;
+    border: none;
 }
 
 body{

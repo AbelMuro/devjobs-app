@@ -1,0 +1,41 @@
+.container{
+    width: 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.themeIcon:nth-of-type(1){
+    width: 20px;
+    object-fit: contain;
+}
+
+.themeIcon:nth-of-type(2){
+    width: 14px;
+    object-fit: contain;
+}
+
+.switch{
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+}
+
+.dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-color: #5964E0;
+}
+
+.switch:hover .dot{
+    background-color: #939BF4;
+}

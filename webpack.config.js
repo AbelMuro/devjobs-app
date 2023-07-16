@@ -18,12 +18,6 @@ module.exports = {
     devServer: {                              
         port: 3000,                         
         historyApiFallback: true,            
-        proxy: {                            
-            '/': {                                     
-                target: 'http://localhost:3000',            
-                router: () => 'http://localhost:5000'       
-            }
-        }
     },
     module: {
         rules: [                               

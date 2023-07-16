@@ -1,0 +1,58 @@
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-left: 1px solid rgba(110, 128, 152, 0.20000000298023224);
+    padding-left: 32px;
+}
+
+.checkbox_container{
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox_container.dark{
+    background-color: rgba(255, 255, 255, 0.103469118475914)
+}
+
+.checkbox_container.light{
+    background-color: rgba(25, 32, 45, 0.103469118475914);
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkmark{
+    display: none;
+    width: 24px;
+    object-fit: contain;
+    position: absolute;
+    top: 0px;
+}
+
+.checkbox:checked ~ .checkmark{
+    display: block;
+}
+
+.title{
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    bottom: 3px;
+}
+
+.title.dark{
+    color: #FFFFFF
+}
+
+.title.light{
+    color: #19202D;
+}
