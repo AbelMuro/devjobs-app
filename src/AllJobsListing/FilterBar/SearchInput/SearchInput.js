@@ -1,20 +1,15 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './styles.module.css';
 import icon from './icons/icon-search.svg';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 function SearchInput({theme}) {
     const [search, setSearch] = useState('');
-    const errorMessageRef = useRef();
+    const tablet = useMediaQuery('(max-width: 1100px)');
+
 
     const handleChange = (e) => {
-        e.target.setCustomValidity('');
-        errorMessageRef.current.style.display = '';
         setSearch(e.target.value);
-    }
-
-    const handleInvalid = (e) => {
-        e.target.setCustomValidity(' ');
-        errorMessageRef.current.style.display = 'block';
     }
 
     return(
@@ -28,11 +23,9 @@ function SearchInput({theme}) {
                     className={theme ? 
                         [styles.input, styles.dark].join(' ') : 
                         [styles.input, styles.light].join(' ')}
-                    onInvalid={handleInvalid}
-                    placeholder='Filter by title, companies, expertise…'
-                    required
+                    placeholder={tablet ? 'Filter by title...' : 'Filter by title, companies, expertise…'}
                     />
-                <div className={styles.errorMessage} ref={errorMessageRef}>
+                <div className={styles.errorMessage}>
                     Can't be empty
                 </div>
             </div>

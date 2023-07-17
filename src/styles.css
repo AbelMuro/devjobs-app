@@ -5,6 +5,10 @@
 
 :root{
     --font: 'kumbh sans';    
+    --closest: 100;
+    --close: 75;
+    --far: 50;
+    --farthest: 25;
 }
 
 * {

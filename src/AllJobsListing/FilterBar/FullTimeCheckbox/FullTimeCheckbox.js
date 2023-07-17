@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import styles from './styles.module.css';
 import checkmark from './images/checkmark.svg';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 function FullTimeCheckbox({theme}) {
     const [checked, setChecked] = useState(false);
+    const tablet = useMediaQuery('(max-width: 1100px)');
 
     const handleChecked = () => {
         setChecked(!checked);
@@ -26,8 +28,9 @@ function FullTimeCheckbox({theme}) {
             <p className={theme ? 
                 [styles.title, styles.dark].join(' ') : 
                 [styles.title, styles.light].join(' ')}>
-                Full Time Only
+                {tablet ? 'Full Time' : 'Full Time Only'}
             </p>
+            <input type='submit' value='Search' className={styles.submitButton} />
         </fieldset>
     )
 }

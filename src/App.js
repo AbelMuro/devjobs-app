@@ -1,4 +1,5 @@
 import React from 'react';
+import ChangeBackground from './ChangeBackground';
 import NavigationBar from './NavigationBar';
 import AllJobsListing from './AllJobsListing';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,6 +11,7 @@ function App() {
     return(
         <Provider store={store}>
             <BrowserRouter>
+                <ChangeBackground/>
                 <NavigationBar/>
                 <Routes>
                     <Route index element={<AllJobsListing/>}/>

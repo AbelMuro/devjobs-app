@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0px 0px 24px 24px;
+}
+
+.checkbox{
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: rgba(25, 32, 45, 0.1);
+    cursor: pointer;
+}
+
+.invisibleCheckbox{
+    display: none;
+}
+
+.checkmark{
+    display: none;
+    width: 24px;
+    object-fit: contain;
+}   
+
+.invisibleCheckbox:checked ~ .checkmark{
+    display: block;
+} 
+
+.title{
+    color: #19202D;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

@@ -54,17 +54,12 @@
     outline: none;
 }
 
-.errorMessage{
-    display: none;
-    width: 100px;
-    color: red;
-    font-family: var(--font);
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 162.5%;
-    position: absolute;
-    bottom: -19px;
-    left: 33px;
-    margin: auto;
+
+@media(max-width: 1100px) {
+    .input_container{
+        width: 200px
+    }
+    .input{
+        width: 150px;
+    }
 }

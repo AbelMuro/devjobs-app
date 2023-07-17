@@ -47,6 +47,7 @@
     line-height: normal;
     position: relative;
     bottom: 3px;
+    margin-right: 10px;
 }
 
 .title.dark{
@@ -55,4 +56,33 @@
 
 .title.light{
     color: #19202D;
+}
+
+.submitButton{
+    width: 123px;
+    height: 48px;
+    background-color: #5964E0;
+    border-radius: 5px;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.submitButton:hover{
+    background-color: #939BF4;
+}
+
+@media(max-width: 1100px){
+    .container{
+        padding-left: 20px;
+    }
+
+    .submitButton{
+        width: 80px;
+    }
 }
