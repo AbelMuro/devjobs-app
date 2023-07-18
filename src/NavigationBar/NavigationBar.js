@@ -4,7 +4,6 @@ import styles from './styles.module.css';
 import logo from './images/logo.svg';
 
 
-//need to set the tablet background image
 
 function NavBar(){
     return(

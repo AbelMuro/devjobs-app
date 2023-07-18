@@ -21,7 +21,11 @@ function MobileFilterBar({theme, handleSubmit}) {
                 onSubmit={handleSubmit}>
                 <SearchInput theme={theme}/>
                 <div className={styles.search_container}>
-                    <img src={theme ? filterIconWhite : filterIcon} className={styles.icon} onClick={handleOpen}/>
+                    <img src={theme ? 
+                        filterIconWhite : 
+                        filterIcon} 
+                        className={styles.icon} 
+                        onClick={handleOpen}/>
                     <button className={styles.searchButton}>
                         <img src={searchIcon} className={styles.searchIcon}/>
                     </button>

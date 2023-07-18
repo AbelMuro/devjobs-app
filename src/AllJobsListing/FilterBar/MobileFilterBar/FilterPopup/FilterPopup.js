@@ -1,8 +1,10 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, memo} from 'react';
 import LocationInput from './LocationInput';
 import FullTimeCheckbox from './FullTimeCheckbox/FullTimeCheckbox';
 import styles from './styles.module.css';
 
+
+//this is where i left off, i will need to get the current theme from the store and pass it down as props
 function FilterPopup({openPopup, setOpenPopup}) {
     const overlayRef = useRef();
     const dialogRef = useRef();
@@ -30,7 +32,6 @@ function FilterPopup({openPopup, setOpenPopup}) {
                 dialogRef.current.style.display = ''
             }, 200)
         }
-
     }, [openPopup])
 
     useEffect(() => {
@@ -39,9 +40,7 @@ function FilterPopup({openPopup, setOpenPopup}) {
                 setOpenPopup(false);
         }
         const overlay = document.querySelector('.' + styles.overlay);
-
         overlay.addEventListener('click', handleClose)
-
         return () => {
            overlay.removeEventListener('click', handleClose);
         }
@@ -58,4 +57,4 @@ function FilterPopup({openPopup, setOpenPopup}) {
     )
 }
 
-export default FilterPopup;
+export default memo(FilterPopup);

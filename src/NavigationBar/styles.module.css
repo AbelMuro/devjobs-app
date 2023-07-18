@@ -29,13 +29,19 @@
     }
 }
 
+@media(max-width: 1000px){
+    .container{
+        background-image: url('./images/bg-pattern-header-tablet.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 
 @media(max-width: 760px){
     .container{
         border-radius: 0px;
         height: 136px;
         background-image: url('./images/bg-pattern-header-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 }

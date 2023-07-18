@@ -16,3 +16,15 @@
         width: 90%;
     }
 }
+
+@media(max-width: 1000px){
+    .container{
+        gap: 70px;
+    }
+}
+
+@media(max-width: 660px){
+    .container{
+        gap: 57px;
+    }
+}
