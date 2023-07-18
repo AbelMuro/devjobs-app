@@ -22,3 +22,20 @@
     width: 115px;
     object-fit: contain;
 }
+
+@media(max-width: 1200px){
+    .content{
+        width: 90%;
+    }
+}
+
+
+@media(max-width: 760px){
+    .container{
+        border-radius: 0px;
+        height: 136px;
+        background-image: url('./images/bg-pattern-header-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

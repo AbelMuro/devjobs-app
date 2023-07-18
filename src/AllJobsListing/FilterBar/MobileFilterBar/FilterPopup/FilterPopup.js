@@ -33,8 +33,22 @@ function FilterPopup({openPopup, setOpenPopup}) {
 
     }, [openPopup])
 
+    useEffect(() => {
+        const handleClose = (e) => {
+            if(e.target.matches('.' + styles.overlay))
+                setOpenPopup(false);
+        }
+        const overlay = document.querySelector('.' + styles.overlay);
+
+        overlay.addEventListener('click', handleClose)
+
+        return () => {
+           overlay.removeEventListener('click', handleClose);
+        }
+    }, [])
+
     return(
-        <div className={styles.overlay} ref={overlayRef} onClick={handleOpen}>
+        <div className={styles.overlay} ref={overlayRef}>
             <dialog className={styles.dialog} ref={dialogRef}>
                 <LocationInput/>
                 <FullTimeCheckbox/>

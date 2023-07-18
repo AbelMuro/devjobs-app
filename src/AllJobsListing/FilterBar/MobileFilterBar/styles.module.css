@@ -17,28 +17,6 @@
     background-color: #19202D;
 }
 
-.input{
-    background-color: transparent;
-    width: 150px;
-    font-family: var(--font);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.input.dark{
-    color: #FFFFFF;
-}
-
-.input.light{
-    color: #19202D
-}
-
-.input:focus{
-    outline: none;
-}
-
 .icon{
     width: 20px;
     object-fit: contain;

@@ -17,13 +17,14 @@ function FilterBar() {
         const search = e.target.elements.search.value;
         const location = e.target.elements.location.value;
         let fulltime = e.target.elements.fulltime.value;
+
         fulltime = fulltime === 'true' ? true : false;              //'fulltime' initially has a string instead of a boolean value
         dispatch({type: 'change filter', filter: {search, location, fulltime}})
     }
 
 
     return mobile ? 
-        <MobileFilterBar theme={theme}/> :
+            <MobileFilterBar theme={theme} handleSubmit={handleSubmit}/> :
         <form className={theme ? 
             [styles.container, styles.dark].join(' ') : 
             [styles.container, styles.light].join(' ')} 
