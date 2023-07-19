@@ -187,3 +187,35 @@
 .role_list.light {
     color: #5964E0;
 }
+
+@media(max-width: 700px){
+    .container{
+        padding: 40px 25px 40px 24px;
+    }
+
+    .flex{
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 32px;
+    }
+
+    .position_data{
+        row-gap: 11px;
+    }
+
+    .position{
+        font-size: 1.25rem;
+    }
+
+    .applyButton{
+        width: 100%;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
+
+    .requirements{
+        margin-bottom: 32px;
+    }
+}

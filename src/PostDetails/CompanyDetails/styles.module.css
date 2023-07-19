@@ -98,3 +98,45 @@
 .company_siteButton.light:hover{
     background-color: rgba(89, 100, 224, 0.351167231798172);
 }
+
+@media(max-width: 700px){
+    .container{
+        height: 205px;
+        overflow: initial;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 49px;
+    }
+
+    .company_logo{
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo{
+        width: 40px;
+    }
+
+    .company_siteButton{
+        bottom: 32px;
+        top: initial;
+        left: 0px;
+        right: 0px;
+    }
+
+    .company_data{
+        text-align: center;
+    }
+
+    .company{
+        font-size: 1.25rem;
+    }
+
+
+}

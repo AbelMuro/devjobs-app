@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './styles.module.css';
 import {useSelector} from 'react-redux';
 
-//this is where i left off
 function PostDescription({state}) {
     const theme = useSelector(state => state.theme);
 
