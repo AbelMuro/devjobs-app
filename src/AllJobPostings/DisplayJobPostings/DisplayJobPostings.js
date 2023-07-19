@@ -1,15 +1,11 @@
 import React, {useMemo, useState, useEffect, useRef} from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import postings from '../../Data';
+import JobPosting from './JobPosting';
 import styles from './styles.module.css';
-import logos from '../../Common/Logos';
-
 
 function DisplayJobListings() {
-    const [loadMore, setLoadMore] = useState(9);
-    const navigate = useNavigate();
-    const theme = useSelector(state => state.theme);
+    const [loadMore, setLoadMore] = useState(6);
     const filter = useSelector(state => state.filter);
     const loadMoreButtonRef = useRef();
 
@@ -19,30 +15,15 @@ function DisplayJobListings() {
         else
             setLoadMore(loadMore - 6);
     }
-
-    const handleListing = (e) => {
-        let post = e.target.getAttribute('data-post');
-        post = JSON.parse(post);
-        navigate('/ListingDetails', {state: post});
-    }
-
-
-    const allListings = useMemo(() => {
-        return postings.map((posting, index) => {
-            if(index + 1 > loadMore) 
-                return;
-
-            const datePosted = posting.postedAt;
-            const contract = posting.contract;
-            const position = posting.position;
-            const company = posting.company;
-            const location = posting.location;
-            const logoName = posting.logo.replace('.svg', '');
-            const logoBackground = posting.logoBackground;
+    
+    const allPosts = useMemo(() => {
+        const posts = postings.map((posting, i) => {
             const filterFullTime = filter.fulltime;
             const filterSearch = filter.search.toLowerCase();
             const filterLocation = filter.location.toLowerCase();
-            const jobPosting = JSON.stringify(posting);
+            const contract = posting.contract;
+            const position = posting.position;
+            const location = posting.location;
 
             if(filterFullTime && contract !== 'Full Time')
                 return;
@@ -54,50 +35,39 @@ function DisplayJobListings() {
                 return;
 
             return(
-                <section className={theme ? 
-                        [styles.posting, styles.dark].join(' ') : 
-                        [styles.posting, styles.light].join(' ')} 
-                    key={index} 
-                    data-id={posting.id}>
-                    <div className={styles.logo_container} style={{backgroundColor: logoBackground}}>
-                        <img className={styles.logo} src={logos[logoName]}/>
-                    </div>
-                    <p className={styles.timeStamp}>
-                        {datePosted}
-                    </p>
-                    <div className={styles.dot}></div>
-                    <p className={styles.contract}>
-                        {contract}
-                    </p>
-                    <a className={theme ? 
-                        [styles.position, styles.dark].join(' ') : 
-                        [styles.position, styles.light].join(' ')} 
-                        onClick={handleListing}
-                        data-post={jobPosting}>
-                        {position}
-                    </a>
-                    <p className={styles.company}>
-                        {company}
-                    </p>
-                    <p className={styles.location}>
-                        {location}
-                    </p>
-                </section>
+                <JobPosting posting={posting} key={i}/>
             )
         }) 
-    }, [loadMore, theme, filter])
+        return posts.filter((post) => {
+            if(post)
+                return true;
+            else
+                return false;
+        })
+    }, [loadMore, filter])
+
+    const loadPosts = useMemo(() => {
+        const posts = [];
+        for(let i = 0; i < loadMore; i++){
+            posts.push(allPosts[i]);
+        }
+        return posts;
+    }, [loadMore, allPosts])
 
     useEffect(() => {
-        if(loadMore >= postings.length)
-            loadMoreButtonRef.current.innerHTML = 'Load Less'
-        else
-            loadMoreButtonRef .current.innerHTML = 'Load More'; 
-    }, [loadMore])
+        setLoadMore(6);
+    }, [filter])
 
+    useEffect(() => {
+        if(loadMore >= allPosts.length)
+            loadMoreButtonRef.current.style.display = 'none';
+        else 
+            loadMoreButtonRef.current.style.display = '';
+    }, [loadMore, allPosts])
 
     return(
         <section className={styles.container}>
-            {allListings}
+            {loadPosts}
             <button className={styles.loadMore} onClick={handleLoad} ref={loadMoreButtonRef}>
                 Load More
             </button>

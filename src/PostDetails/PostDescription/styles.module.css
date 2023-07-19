@@ -130,11 +130,11 @@
     margin-bottom: 24px;
 }
 
-.requirements.dark, .item.dark, .role.dark, .role_list.dark{
+.requirements.dark, .item.dark, .role.dark, .role_list.dark, .description.dark{
     color: #9DAEC2;
 }
 
-.requirements.light, .item.light, .role.light, .role_list.light{
+.requirements.light, .item.light, .role.light, .role_list.light, .description.light{
     color: #6E8098;
 }
 
