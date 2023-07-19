@@ -7,7 +7,6 @@ import backgroundMobileForNav from '../NavigationBar/images/bg-pattern-header-mo
 function ChangeBackground() {
     const theme = useSelector(state => state.theme);
 
-
     useEffect(() => {
         const body = document.querySelector('body');
 
