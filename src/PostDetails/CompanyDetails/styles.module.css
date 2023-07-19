@@ -1,0 +1,100 @@
+.container{
+    width: 100%;
+    height: 140px;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container.dark{
+    background-color: #19202D;
+}
+
+.container.light{
+    background-color: white;
+}
+
+.company_logo{
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+    object-fit: contain;
+}
+
+.company_data{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.company{
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.company.dark{
+    color: white;
+}
+
+.company.light {
+    color: #19202D;
+}
+
+.company_website{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.company_siteButton{
+    width: 147px;
+    height: 48px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 43px;
+    margin: auto;
+}
+
+.company_siteButton.dark {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.company_siteButton.light {
+    background-color: rgba(89, 100, 224, 0.10000000149011612);
+    color: #5964E0;
+}
+
+
+.company_siteButton.dark:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.company_siteButton.light:hover{
+    background-color: rgba(89, 100, 224, 0.351167231798172);
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+//this is where i left off
 function PostDescription({state}) {
     return(
         <section className={styles.container}>
