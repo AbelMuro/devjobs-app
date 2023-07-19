@@ -1,12 +1,14 @@
 import React, {useMemo, useState, useEffect, useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import postings from '../../Data';
 import styles from './styles.module.css';
-import logos from './logos';
+import logos from '../../Common/Logos';
 
 
 function DisplayJobListings() {
     const [loadMore, setLoadMore] = useState(9);
+    const navigate = useNavigate();
     const theme = useSelector(state => state.theme);
     const filter = useSelector(state => state.filter);
     const loadMoreButtonRef = useRef();
@@ -16,6 +18,12 @@ function DisplayJobListings() {
             setLoadMore(loadMore + 6)
         else
             setLoadMore(loadMore - 6);
+    }
+
+    const handleListing = (e) => {
+        let post = e.target.getAttribute('data-post');
+        post = JSON.parse(post);
+        navigate('/ListingDetails', {state: post});
     }
 
 
@@ -34,6 +42,7 @@ function DisplayJobListings() {
             const filterFullTime = filter.fulltime;
             const filterSearch = filter.search.toLowerCase();
             const filterLocation = filter.location.toLowerCase();
+            const jobPosting = JSON.stringify(posting);
 
             if(filterFullTime && contract !== 'Full Time')
                 return;
@@ -62,7 +71,9 @@ function DisplayJobListings() {
                     </p>
                     <a className={theme ? 
                         [styles.position, styles.dark].join(' ') : 
-                        [styles.position, styles.light].join(' ')} >
+                        [styles.position, styles.light].join(' ')} 
+                        onClick={handleListing}
+                        data-post={jobPosting}>
                         {position}
                     </a>
                     <p className={styles.company}>

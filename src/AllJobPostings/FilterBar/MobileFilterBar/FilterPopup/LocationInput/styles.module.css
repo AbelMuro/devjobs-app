@@ -15,12 +15,20 @@
 }
 
 .input{
-    color: #19202D;
     font-family: var(--font);
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    background-color: transparent;
+}
+
+.input.dark{
+    color: white;
+}
+
+.input.light{
+    color: #19202D;
 }
 
 .input:focus{

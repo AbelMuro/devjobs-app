@@ -14,6 +14,14 @@
     cursor: pointer;
 }
 
+.checkbox.dark{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.checkbox.light{
+    background-color: rgba(25, 32, 45, 0.1);
+}
+
 .invisibleCheckbox{
     display: none;
 }
@@ -29,10 +37,17 @@
 } 
 
 .title{
-    color: #19202D;
     font-family: var(--font);
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.title.dark{
+    color: white;
+}
+
+.title.light{
+    color: #19202D;
 }

@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, memo} from 'react';
+import { useSelector } from 'react-redux';
 import LocationInput from './LocationInput';
 import FullTimeCheckbox from './FullTimeCheckbox/FullTimeCheckbox';
 import styles from './styles.module.css';
@@ -6,6 +7,7 @@ import styles from './styles.module.css';
 
 //this is where i left off, i will need to get the current theme from the store and pass it down as props
 function FilterPopup({openPopup, setOpenPopup}) {
+    const theme = useSelector(state => state.theme)
     const overlayRef = useRef();
     const dialogRef = useRef();
 
@@ -48,10 +50,13 @@ function FilterPopup({openPopup, setOpenPopup}) {
 
     return(
         <div className={styles.overlay} ref={overlayRef}>
-            <dialog className={styles.dialog} ref={dialogRef}>
-                <LocationInput/>
-                <FullTimeCheckbox/>
-                <input type='submit' value='Search' className={styles.submitButton} onClick={handleOpen}/>
+            <dialog className={theme ? 
+                [styles.dialog, styles.dark].join(' ') : 
+                [styles.dialog, styles.light].join(' ')} 
+                ref={dialogRef}>
+                    <LocationInput theme={theme}/>
+                    <FullTimeCheckbox theme={theme}/>
+                    <input type='submit' value='Search' className={styles.submitButton} onClick={handleOpen}/>
             </dialog>
         </div>
     )

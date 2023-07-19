@@ -1,15 +1,15 @@
 import React from 'react';
 import FilterBar from './FilterBar';
-import DisplayJobListings from './DisplayJobListings';
+import DisplayJobPostings from './DisplayJobPostings';
 import styles from './styles.module.css';
 
-function AllJobsListing() {
+function AllJobsPostings() {
     return(
         <main className={styles.container}>
             <FilterBar/>
-            <DisplayJobListings/>
+            <DisplayJobPostings/>
         </main>
     )
 }
 
-export default AllJobsListing;
+export default AllJobsPostings;

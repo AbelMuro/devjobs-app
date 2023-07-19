@@ -1,7 +1,8 @@
 import React from 'react';
 import ChangeBackground from './ChangeBackground';
 import NavigationBar from './NavigationBar';
-import AllJobsListing from './AllJobsListing';
+import AllJobPostings from './AllJobPostings';
+import PostDetails from './PostDetails';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './Store';
@@ -14,7 +15,8 @@ function App() {
                 <ChangeBackground/>
                 <NavigationBar/>
                 <Routes>
-                    <Route index element={<AllJobsListing/>}/>
+                    <Route path='/' element={<AllJobPostings/>}/>
+                    <Route path='/ListingDetails' element={<PostDetails/>}/>
                 </Routes>
             </BrowserRouter>            
         </Provider>

@@ -1,0 +1,156 @@
+.container{
+    border-radius: 6px;
+    background-color: white;
+    padding: 48px 43px 48px 48px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.position_data{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 0.01fr 1fr;
+    column-gap: 12px;
+    row-gap: 8px;
+}
+
+.postedAt, .contract{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dot{
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #6E8098;
+    align-self: center;
+    justify-self: center;
+}
+
+.jobPosition{
+    color: #19202D;
+    font-family: var(--font);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.location{
+    color: #5964E0;
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    grid-column: 1/4;
+}
+
+.applyButton{
+    width: 148px;
+    height: 48px;
+    background-color: #5964E0;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 5px;
+    cursor: pointer;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+}
+
+.applyButton:hover{
+    background-color: #939BF4;
+}
+
+.description{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%;
+    margin-bottom: 40px;
+}
+
+.title{
+    color: #19202D;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 28px;
+}
+
+.requirements{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%;
+    margin-bottom: 24px;
+}
+
+
+.requirement_list{
+    padding-left: 15px;
+    list-style-image: url('./icons/dot.svg');
+    margin-bottom: 40px;
+}
+
+.requirement_list .item::marker{
+   color: #5964E0;
+}
+
+.item{
+    color: #6E8098;
+    padding-left: 17px;
+    margin-bottom: 8px;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%;
+}
+
+.role{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%;
+    margin-bottom: 24px;
+}
+
+.role_list{
+    padding-left: 15px;
+    
+}
+
+.role_list .item::marker{
+    color: #5964E0;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 162.5%
+}
