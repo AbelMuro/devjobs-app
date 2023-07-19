@@ -3,8 +3,10 @@ import logos from '../../Common/Logos'
 import styles from './styles.module.css';
 import {useSelector} from 'react-redux';
 
+//this is where i left off
+
 function CompanyDetails({state}) {
-    const theme = useSelector(state => state.theme)
+    const theme = useSelector(state => state.theme);
 
     return(            
         <div className={theme ? 

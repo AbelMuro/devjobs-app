@@ -4,6 +4,14 @@
     padding: 48px 43px 48px 48px;
 }
 
+.container.dark{
+    background-color: #19202D;
+}
+
+.container.light{
+    background-color: white;
+}
+
 .flex{
     display: flex;
     justify-content: space-between;
@@ -37,7 +45,6 @@
 }
 
 .jobPosition{
-    color: #19202D;
     font-family: var(--font);
     font-size: 1.75rem;
     font-style: normal;
@@ -45,6 +52,14 @@
     line-height: normal;
     grid-column: 1/4;
     grid-row: 2/3;
+}
+
+.jobPosition.dark{
+    color: white;
+}
+
+.jobPosition.light{
+    color: #19202D;
 }
 
 .location{
@@ -90,7 +105,6 @@
 }
 
 .title{
-    color: #19202D;
     font-family: var(--font);
     font-size: 1.25rem;
     font-style: normal;
@@ -99,8 +113,15 @@
     margin-bottom: 28px;
 }
 
+.title.dark{
+    color: white;
+}
+
+.title.light{
+    color: #19202D;
+}
+
 .requirements{
-    color: #6E8098;
     font-family: var(--font);
     font-size: 1rem;
     font-style: normal;
@@ -109,6 +130,13 @@
     margin-bottom: 24px;
 }
 
+.requirements.dark, .item.dark, .role.dark, .role_list.dark{
+    color: #9DAEC2;
+}
+
+.requirements.light, .item.light, .role.light, .role_list.light{
+    color: #6E8098;
+}
 
 .requirement_list{
     padding-left: 15px;
@@ -121,7 +149,6 @@
 }
 
 .item{
-    color: #6E8098;
     padding-left: 17px;
     margin-bottom: 8px;
     font-family: var(--font);
@@ -131,8 +158,8 @@
     line-height: 162.5%;
 }
 
+
 .role{
-    color: #6E8098;
     font-family: var(--font);
     font-size: 1rem;
     font-style: normal;
@@ -140,6 +167,7 @@
     line-height: 162.5%;
     margin-bottom: 24px;
 }
+
 
 .role_list{
     padding-left: 15px;
@@ -153,4 +181,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 162.5%
+}
+
+
+.role_list.light {
+    color: #5964E0;
 }

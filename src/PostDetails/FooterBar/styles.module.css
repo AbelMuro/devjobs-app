@@ -1,0 +1,72 @@
+.container{
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;                  /* footer has some space on top for some reason*/
+}
+
+.container.dark{
+    background-color: #19202D;
+}
+
+.container.light{
+    background-color: white;
+}
+
+.content{
+    width: 730px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.position_company{
+    display:flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.position{
+    font-family: var(--font);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.position.dark{
+    color: white;
+}
+
+.position.light {
+    color: #19202D;
+}
+
+.company{
+    color: #6E8098;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.applyButton{
+    width: 141px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #5964E0;
+    color: white;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    cursor: pointer;
+    align-self: center;
+}
+
+.applyButton:hover{
+    background-color: #939BF4;
+}
