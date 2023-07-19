@@ -24,6 +24,7 @@ function DisplayJobListings() {
             const contract = posting.contract;
             const position = posting.position;
             const location = posting.location;
+            const company = posting.company;
 
             if(filterFullTime && contract !== 'Full Time')
                 return;
