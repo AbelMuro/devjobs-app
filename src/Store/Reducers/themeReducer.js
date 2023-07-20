@@ -5,6 +5,8 @@ export default function themeReducer(theme = false, action) {
     switch(action.type){
         case 'change theme':
             return !theme;
+        case 'set initial theme': 
+            return action.theme;
         default: 
             return theme;
     }

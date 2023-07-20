@@ -8,6 +8,13 @@ import {Provider} from 'react-redux';
 import store from './Store';
 import './styles.css';
 
+const setTheme = () => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return { type: 'set initial theme', theme: prefersDarkMode};
+  };
+  
+  store.dispatch(setTheme());
+
 function App() {
     return(
         <Provider store={store}>
